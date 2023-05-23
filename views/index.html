@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Bar Chart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/css.css">
+</head>
+<body>
+<div class="container">
+  <h1>Binary Analysis Tool</h1>
+  <form id="frmTick">
+    <div class="form-group">
+      <label for="Market">Market</label>
+      <select class="form-control" id="symbol">
+        <option selected value="RDBULL">BULL Market Index</option>
+        <option value="RDBEAR">BEAR Market Index</option>
+        <option value="R_10">VOLATILITY 10 Index</option>
+        <option value="1HZ10V">VOLATILITY 10 1s Index</option>
+        <option value="R_25">VOLATILITY 25 Index</option>
+        <option value="1HZ25V">VOLATILITY 25 1s Index</option>
+        <option value="R_50">VOLATILITY 50 Index</option>
+        <option value="1HZ50V">VOLATILITY 50 1s Index</option>
+        <option value="R_75">VOLATILITY 75 Index</option>
+        <option value="1HZ75V">VOLATILITY 75 1s Index</option>
+        <option value="R_100">VOLATILITY 100 Index</option>
+         <option value="1HZ100V">VOLATILITY 100 1s Index</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="no_Ticks">Ticks</label>
+      <input type="text" class="form-control" id="count">
+    </div>
+    <button type="button" class="btn btn-info" onclick="updateTickAndMarket()" id="changeTicks">GO</button>
+  </form>
+  <div class="row" id="rounded-div">
+    <div class="col-sm" id="latestPrice">Latest Price:</div>
+  </div>
+  <label for="even" id="evenNo"></label> 
+  <label for="odd" id="oddNo"></label>
+  <div class="container-fluid"> 
+    <canvas  id="chart"></canvas>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+<script src="js/new.js"></script>
+</body>
+</html>
+
